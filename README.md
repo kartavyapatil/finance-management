@@ -1,6 +1,6 @@
 # Finanace Management 
 In this website We can create budget and add expenses track your expenses in proper manager
-for frontend use :- react ,tailwind 
+for <br>frontend use :- react ,tailwind <br>
 backend use :- node.js ,express, mongodb,jsonwebtoken 
 <h3>to run backend </h3>
 Step 1 :- In backend add env file and add :- 
