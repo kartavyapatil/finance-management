@@ -69,38 +69,38 @@ const Index = () => {
   return (
     <div>
       <div className='text-6xl font-sans m-3 p-1 font-bold mb-2'>Welcome back</div>
-      <div className='flex justify-around'>
-        <div className='border-2 border-dotted border-gray rounded-lg shadow-lg m-3 p-5 bg-white w-[40vw] mt-10'>
+      <div className='md:flex md:justify-around md:flex-row flex-col '>
+        <div className='border-2 border-dotted border-gray rounded-lg shadow-lg m-3 p-5 bg-white md:w-[40vw] mt-10'>
           <div className='text-2xl font-sans m-3 p-1 font-bold mb-2'>Create Budget</div>
           <Formik initialValues={budgetInitialValues} validationSchema={budgetValidationSchema} onSubmit={handleBudgetSubmit} >
             <Form className='flex flex-col gap-2'>
               <label htmlFor='budgetName' className='text-lg font-sans font-bold m-1'> Budget Name :-</label>
-              <Field type='text' name='budgetName' id='budgetName' placeholder='Enter your budget name' className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 w-[30vw]'/>
+              <Field type='text' name='budgetName' id='budgetName' placeholder='Enter your budget name' className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 md:w-[30vw]'/>
               <ErrorMessage name='budgetName' component='p' className='text-red-500 text-sm ml-3' />
               <label htmlFor='amount' className='text-lg font-sans font-bold m-1'>  Amount :- </label>
-              <Field type='number' name='amount' id='amount' placeholder='Enter your budget amount' className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 w-[30vw]' />
+              <Field type='number' name='amount' id='amount' placeholder='Enter your budget amount' className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 md:w-[30vw]' />
               <ErrorMessage name='amount' component='p' className='text-red-500 text-sm ml-3' />
-              <button      type='submit'   className='bg-blue-500 text-white rounded-lg shadow-lg w-[10vw] ml-4 h-10 mt-5 cursor-pointer'    >  Create    </button>
+              <button      type='submit'   className='bg-blue-500 text-white rounded-lg shadow-lg md:w-[10vw] ml-4 h-10 mt-5 cursor-pointer'    >  Create    </button>
             </Form>
           </Formik>
         </div>
 
-        <div className='border-2 border-dotted border-gray rounded-lg shadow-lg m-3 p-5 bg-white w-[40vw] mt-10'>
+        <div className='border-2 border-dotted border-gray rounded-lg shadow-lg m-3 p-5 bg-white md:w-[40vw] mt-10'>
           <div className='text-2xl font-sans m-3 p-1 font-bold mb-2'>Create Expense</div>
           <Formik initialValues={expenseInitialValues} validationSchema={expenseValidationSchema} onSubmit={handleExpenseSubmit} >
             <Form className='flex flex-col gap-2'>
               <label htmlFor='expensename' className='text-lg font-sans font-bold m-1'>  Expense Name :-</label>
-              <Field  type='text'  name='expensename'  id='expensename'  placeholder='Enter your expense name'  className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 w-[30vw]'/>
+              <Field  type='text'  name='expensename'  id='expensename'  placeholder='Enter your expense name'  className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 md:w-[30vw]'/>
               <ErrorMessage name='expensename' component='p' className='text-red-500 text-sm ml-3' />
               <label htmlFor='amount' className='text-lg font-sans font-bold m-1'> Amount :- </label>
-              <Field   type='number' name='amount' id='amount' placeholder='Enter your expense amount' className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 w-[30vw]' />
+              <Field   type='number' name='amount' id='amount' placeholder='Enter your expense amount' className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 md:w-[30vw]' />
               <ErrorMessage name='amount' component='p' className='text-red-500 text-sm ml-3' />
               <label htmlFor='category' className='text-lg font-sans font-bold m-1'>  Budget Category :-</label>
               {/* <Field  as='select'  name='category'  id='category'  className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 w-[30vw]' >
                  {isLoading ? ( <option>Loading...</option>) : data.budgets.length > 0 ? (data.budgets.map((c, i) => (
                                 <option key={c._id || i}>{c.budgetName}</option> ))) : (<option disabled>No budgets available</option>)}             
               </Field> */}
-              <Field as='select' name='category' id='category' className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 w-[30vw]'>
+              <Field as='select' name='category' id='category' className='ml-3 border-2 border-gray rounded-sm shadow-lg h-10 md:w-[30vw]'>
   <option value="">Select a budget category</option>
   {isLoading ? (
     <option>Loading...</option>
@@ -117,7 +117,7 @@ const Index = () => {
               <ErrorMessage name='category' component='p' className='text-red-500 text-sm ml-3' />
               <button
                 type='submit'
-                className='bg-blue-500 text-white rounded-lg shadow-lg w-[10vw] ml-4 h-10 mt-5 cursor-pointer'
+                className='bg-blue-500 text-white rounded-lg shadow-lg md:w-[10vw] ml-4 h-10 mt-5 cursor-pointer'
               >
                 Create
               </button>

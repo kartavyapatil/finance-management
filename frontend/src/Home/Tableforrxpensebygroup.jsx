@@ -69,7 +69,7 @@ const Tableforrxpensebygroup = () => {
     <>
     <Header/>
     <div className='flex justify-between'>
-      <div className='text-4xl font-sans m-3 p-1  mb-2'>Expense of {name} :-</div>
+      <div className='md:text-4xl text-2xl  font-sans m-3 p-1  mb-2'>Expense of {name}:-</div>
       <div className='flex'>
       <button onClick={()=>{deletebudgetfunction(budgetid)}} className="bg-red-500 p-3 rounded-md m-2 cursor-pointer"><RiDeleteBin6Line color="white" size={27} /></button>
       <button onClick={()=>{navigate("/")}} className="bg-blue-400 p-3 rounded-md m-2 cursor-pointer"><FaHome color="white" size={27} /></button>

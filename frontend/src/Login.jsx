@@ -69,7 +69,7 @@ const Login = () => {
                     <Field id='password' name='password' className="rounded-lg bg-slate-200 border-gray-500 py-5 px-2 outline-none h-8 md:w-[26vw] " type='password' placeholder='Enter password' />
                     <ErrorMessage component={'p'} className='text-red-500 text-sm' name='password'/>
                   </div>
-                  <button  className='justify-center w-28 font-serif text-xl bg-green-600 rounded-lg p-1 border ' type='submit'>Submit</button>
+                  <button  className='justify-center w-28 font-serif text-xl bg-green-600 rounded-lg p-1 border cursor-pointer ' type='submit'>Submit</button>
                   <div className='flex'>
                     <p className='font-serif '>Don't have a Account ? </p>
                     <Link to={'/register'} className='font-semibold text-blue-600'>Register</Link>

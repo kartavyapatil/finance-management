@@ -9,7 +9,7 @@ import { useRegisterUserMutation } from '../src/query/Auth.query'; // Corrected 
 import { toast } from 'sonner';
 
 const Register = () => {
-  const [registerUser, registerUserResponse] = useRegisterUserMutation(); // Corrected this line
+  const [registerUser, registerUserResponse] = useRegisterUserMutation(); 
 
 
 
@@ -49,7 +49,7 @@ const Register = () => {
           <img src={logo} className='w-16 ml-3 mt-2' alt="logo" />
         </div>
         <div className='logo-name font-serif font-bold text-2xl'>
-          Inventory Management System
+        Finance Tracker
         </div>
       </div>
       <div className=' flex gap-1 justify-center bg-slate-50'>
@@ -74,7 +74,7 @@ const Register = () => {
                     <Field id='password' name='password' className="rounded-lg bg-slate-200 border-gray-500 py-5 px-2 outline-none h-8 md:w-[26vw]" type='password' placeholder='Enter password' />
                     <ErrorMessage component={'p'} className='text-red-500 text-sm' name='password' />
                   </div>
-                  <button loading={registerUserResponse.isLoading} className='justify-center w-28 font-serif text-xl bg-green-600 rounded-lg p-1 border' type='submit'>Submit</button>
+                  <button loading={registerUserResponse.isLoading} className='justify-center w-28 font-serif text-xl bg-green-600 rounded-lg p-1 border cursor-pointer' type='submit'>Submit</button>
                   <div className='flex'>
                     <p className='font-serif'>Already have an Account? </p>
                     <Link to={'/login'} className='font-semibold text-blue-600'>Login</Link>

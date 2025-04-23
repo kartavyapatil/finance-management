@@ -31,7 +31,7 @@ const Header = () => {
           </div>
         </div>
         <div className='end '>
-          <button className='pl-4 ml-3' onClick={logout}><IoLogOutOutline size={27} /></button>
+          <button className='pl-4 ml-3 cursor-pointer' onClick={logout}><IoLogOutOutline size={27} /></button>
         </div>
       </nav>
       {/* <div className='w-full h-[0.5vh] bg-slate-300'></div> */}
